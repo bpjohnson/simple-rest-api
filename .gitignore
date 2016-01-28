@@ -11,9 +11,9 @@
 ###################
 
 #Ignore config files. Comment out to include your configs in your git repository.
-common/dev.*
-common/prod.*
-common/test.*
+config/dev.*
+config/prod.*
+config/test.*
 
 ###########
 # Tern JS #

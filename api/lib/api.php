@@ -9,7 +9,7 @@ global $debug, $config;
 
 addIncludePath( './alib' );
 addIncludePath( './' );
-addIncludePath( '../' );
+addIncludePath( '../..' );
 addIncludePath( '../api', true);
 addIncludePath( '../config', true);
 include_once ('./alib/iuser.inc');
@@ -40,7 +40,7 @@ if ( stristr( $_SERVER[ 'REQUEST_URI' ], 'api' ) && $login->loggedIn ) {
     $api = new api();
 
 } else if (stristr( $_SERVER[ 'REQUEST_URI' ], 'api/loginStatus') || !stristr( $_SERVER[ 'REQUEST_URI' ], 'login')){
-    include_once '../api/loginStatus.inc';
+    include_once '../loginStatus.inc';
     $nli = new loginStatusAPI();
     $nli->notLoggedIn();
 }
