@@ -3,14 +3,14 @@ RewriteBase /
 # If the file doesn't exist, go to the lib for processing.
 RewriteCond %{REQUEST_URI} /api
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^.*$ /lib/api.php [L]
+RewriteRule ^.*$ /api/lib/api.php [L]
 
 RewriteCond %{REQUEST_URI} /login
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^.*$ /lib/api.php [L]
+RewriteRule ^.*$ /api/lib/api.php [L]
 
 # If the file does exist and is one of our files we interpret, go to the lib.
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteCond %{REQUEST_URI} /api
-RewriteCond %{REQUEST_FILENAME} !/lib/api.php
-RewriteRule \.(html|php|xml|json)$ /lib/api.php [L]
+RewriteCond %{REQUEST_FILENAME} !/api/lib/api.php
+RewriteRule \.(inc|html|php|xml|json)$ /api/lib/api.php [L]
