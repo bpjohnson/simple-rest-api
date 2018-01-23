@@ -60,6 +60,3 @@ if ( stristr( $_SERVER[ 'REQUEST_URI' ], 'api' ) && $login->loggedIn ) {
   header("Content-type: application/json");
   print json_encode($output);
 }
-
-
-?>
